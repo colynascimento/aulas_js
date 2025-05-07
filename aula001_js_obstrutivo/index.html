@@ -1,0 +1,37 @@
+<!-- Curso de Desenvolvimento de Sistemas
+Turma 0152
+Autor: Colyana Magalhães da Silva Nascimento
+Data: 06/05/2024
+Princípios Básicos do JavaScript Moderno - Unobtrusive JavaScript
+
+Definição: A ideia de separar completamente o comportamento (JavaScript) da estrutura (HTML) e da apresentação (CSS).
+
+Boas práticas:
+Evitar código JS inline (como atributos onclick no HTML).
+Usar seletores (como querySelector) para "amarrar" eventos ao DOM de forma externa.
+Garantir que o conteúdo básico da página funcione sem JavaScript (acessibilidade e fallback - valor ou comportamento
+alternativo que é usado quando o valor principal está ausente, inválido ou indefinido).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Princípios Básicos do JavaScript Moderno - Unobtrusive JavaScript
+    </title>
+  </head>
+  <body>
+    <!-- Exemplo ruim (obstrutivo): -->
+     <button onclick="alert('Ok')">Clique</button>
+
+     <!-- Exemplo correto (não obstrutivo) -->
+      <button id="meuBotao">Clique</button>
+      <script>
+        document.getElementById('meuBotao').addEventListener('click', () => {
+            alert('Ok'); //Comportamento separado do HTML
+        })
+      </script>
+  </body>
+</html>
