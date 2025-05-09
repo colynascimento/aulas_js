@@ -1,0 +1,38 @@
+<!-- Curso de Desenvolvimento de Sistemas
+Turma 0152
+Autor: Colyana Magalhães da Silva Nascimento
+Data: 08/05/2024
+
+Atividade 01
+Exercício 1: Calculadora Simples
+Crie uma página com dois campos de entrada para números, quatro botões (+, -, *, /)
+e um campo para exibir o resultado. Ao clicar em um botão, mostre o resultado da
+ operação correspondente.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Simples</title>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero-1" required>
+
+        <label for="numero">Digite outro número:</label>
+        <input type="number" id="numero-2" required>
+
+        <button id="btnSoma">+</button>
+        <button id="btnSubtracao">-</button>
+        <button id="btnMultiplicacao">×</button>
+        <button id="btnDivisao">÷</button>
+
+        <p id="resultado"></p>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
