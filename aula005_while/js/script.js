@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Adiciona item com número atual
             addItem('while: ' + i);
             i++;
-        }
+        };
     });
 
     // Evento para o botão com id "btnDoWhile"
