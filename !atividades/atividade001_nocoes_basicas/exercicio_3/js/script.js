@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contador = document.getElementById('contador');
     let count = 0
 
-    texto.addEventListener('input', (event) => {
+    texto.addEventListener('input', () => {
 
         if (texto.value === '') {
             contador.innerHTML = '0';
