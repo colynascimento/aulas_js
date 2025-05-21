@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const valor = dado.value
         
-        if (valor === 'true' || valor === 'false') {
+        if (valor.toLowerCase() === 'true' || valor.toLowerCase() === 'false') {
             avaliacao.textContent = 'Tipo de dado: booleano';
         } else if (!isNaN(parseFloat(valor)) && valor !== '') {
             avaliacao.textContent = 'Tipo de dado: número (int ou float)';
         } else if (valor === '') {
-            avaliacao.textContent = 'Campo vazio!';
+            avaliacao.textContent = 'Tipo de dado: nulo ou vazio';
         } else {
             avaliacao.textContent = 'Tipo de dado: string';
         }
