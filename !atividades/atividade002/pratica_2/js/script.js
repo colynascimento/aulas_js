@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const corTexto = document.getElementById('cor-texto');
     const corCaixa = document.getElementById('cor-caixa');
 
-    function mudarCor(elemento) {
-        
-    }
+    // function mudarCor(elemento) {
+
+    // }
 
     corFundo.addEventListener('input', () => {fundo.style.color = corFundo.value});
     corTexto.addEventListener('input', () => {fundo.style.color = corTexto.value});
