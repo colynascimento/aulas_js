@@ -103,3 +103,27 @@ document.getElementById('botao-find').addEventListener('click', function() {
  * - some(): Verifica se pelo menos um elemento satisfaz a condição
  * - every(): Verifica se todos os elementos satisfazem a condição
  */
+
+document.getElementById('botao-some').addEventListener('click', function() {
+    const existeMenor = pessoas.some(function(pessoa) {
+        return pessoa.idade < 18;
+    });
+
+    document.getElementById('resultado-some').innerHTML = `
+        <strong>Array original:</strong> ${JSON.stringify(pessoas, null, 2)}<br><br>
+        <strong>Existe algum menor de idade? (some):</strong> ${existeMenor ? 'Sim' : 'Não'}<br><br>
+        <small>Observação: some retorna true se pelos menos um elemento passar no teste</small>
+    `;
+});
+
+document.getElementById('botao-every').addEventListener('click', function() {
+    const todosMaiores = pessoas.every(function(pessoa) {
+        return pessoa.idade >= 18;
+    });
+
+    document.getElementById('resultado-every').innerHTML = `
+        <strong>Array original:</strong> ${JSON.stringify(pessoas, null, 2)}<br><br>
+        <strong>Todos são maiores de idade? (every):</strong> ${todosMaiores ? 'Sim' : 'Não'}<br><br>
+        <small>Observação: every retorna true apenas se TODOS os elementos passarem no teste</small>
+    `;
+});
