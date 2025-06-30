@@ -37,6 +37,7 @@ function analiseMenorNumero(numero1, numero2, numero3){
     return `O menor número é: ${menor}`;
 };
 
+// Questão C
 function monitoramentoVelocidade(velocidade){
     if (velocidade > 60){
         return 'Atenção! A velocidade atual está acima do limite permitido de 60km/h, por favor, reduza para sua segurança.'
@@ -45,6 +46,7 @@ function monitoramentoVelocidade(velocidade){
     };
 };
 
+// Questão D
 function calcularAumento(salarioAtual){
     let salario = parseFloat(salarioAtual);
     let novoSalario;
@@ -60,8 +62,9 @@ function calcularAumento(salarioAtual){
     } else {
         return 'Não houve aumento de salário.'
     };
-}
+};
 
+// Questão E
 function calcularPassagem(distanciaRecebida){
     let distancia = parseFloat(distanciaRecebida);
     let preco;
@@ -74,6 +77,64 @@ function calcularPassagem(distanciaRecebida){
 
     return `O preço estimado da viagem é de R$${preco}.`
 
+};
+
+// Questão F
+function detectarBissexto(anoRecebido) {
+    let ano = parseInt(anoRecebido);
+    let bissexto;
+
+    if (ano % 4 == 0 && ano % 100 == 0 && ano % 400 != 0) {
+        bissexto = false;
+    } else if (ano % 4 == 0) {
+        bissexto = true;
+    } else {
+        bissexto = false;
+    };
+
+    if (bissexto) {
+        return `O ano ${ano} é bissexto.`;
+    } else {
+        return `O ano ${ano} não é bissexto.`; 
+    };
+};
+
+// Questão G
+function verificarTriangulo(a, b, c) {
+    a = parseFloat(a);
+    b = parseFloat(b);
+    c = parseFloat(c);
+    let triangulo;
+
+    if (a + b > c && b + c > a && a + c > b) {
+        triangulo = true;
+    } else {
+        triangulo = false;
+    }
+
+    if (triangulo) {
+        return 'O triângulo é válido △ :)';
+    } else {
+        return 'Os segmentos fornecidos não podem formar um triângulo :(';
+    }
+};
+
+// Questão H
+function calcularRaizQuadratica() {
+    const a = 1;
+    const b = -6;
+    const c = 5;
+
+    const delta = b * b - 4 * a * c;
+
+    const x1 = ((-b + delta ** 0.5) / (2 * a)).toFixed(2);
+    const x2 = ((-b - delta ** 0.5) / (2 * a)).toFixed(2);
+
+    if (parseFloat(x1) === 5 && parseFloat(x2) === 1) {
+        return `As raízes calculadas são x' = ${x1} e x'' = ${x2}. O programa é capaz de calcular a equação corretamente.`;
+    } else {
+        return `As raízes calculadas são x' = ${x1} e x'' = ${x2}. O programa está com erro. Entre em contato com o suporte.`;
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -95,6 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const distanciaRecebida = document.getElementById('distancia');
     const botaoCalcularPreco = document.getElementById('btn-calcular-preco');
     const resultadoCalculoPreco = document.getElementById('resultado-calculo-preco');
+
+    const botaoVerificarAno = document.getElementById('btn-verificar-bissexto');
+    const resultadoBissexto = document.getElementById('resultado-bissexto');
+
+    const cateto1 = document.getElementById('cateto1');
+    const cateto2 = document.getElementById('cateto2');
+    const hipotenusa = document.getElementById('hipotenusa');
+    const botaoVerificarTriangulo = document.getElementById('btn-verificar-triangulo');
+    const resultadoTriangulo = document.getElementById('resultado-triangulo');
+
+    const botaoCalcularRaizes = document.getElementById('btn-calcular-raizes');
+    const resultadoRaizes = document.getElementById('resultado-raizes');
 
     // botaoVerificar.addEventListener('click', () => {
     //     const resultado = verificarParOuImpar(numeroRecebido.value);
@@ -126,8 +199,24 @@ document.addEventListener('DOMContentLoaded', () => {
     //     resultadoCalculo.textContent = resultadoSalario;
     // });
 
-    botaoCalcularPreco.addEventListener('click', () => {
-        const resultadoPrecoPassagem =  calcularPassagem(distanciaRecebida.value);
-        resultadoCalculoPreco.textContent = resultadoPrecoPassagem;
+    // botaoCalcularPreco.addEventListener('click', () => {
+    //     const resultadoPrecoPassagem =  calcularPassagem(distanciaRecebida.value);
+    //     resultadoCalculoPreco.textContent = resultadoPrecoPassagem;
+    // });
+
+    // botaoVerificarAno.addEventListener('click', () => {
+    //     const anoRecebido = document.getElementById('ano');
+    //     const resultadoAnoBissexto = detectarBissexto(anoRecebido.value);
+    //     resultadoBissexto.textContent = resultadoAnoBissexto;
+    // });
+
+    // botaoVerificarTriangulo.addEventListener('click', () => {
+    //     const resultadoDoTriangulo = verificarTriangulo(cateto1.value, cateto2.value, hipotenusa.value);
+    //     resultadoTriangulo.textContent = resultadoDoTriangulo;
+    // });
+
+    botaoCalcularRaizes.addEventListener('click', () => {
+        const resultadoRaiz = calcularRaizQuadratica();
+        resultadoRaizes.textContent = resultadoRaiz;
     });
 });
