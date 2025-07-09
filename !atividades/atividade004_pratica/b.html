@@ -8,34 +8,44 @@
   </head>
 
   <body>
-    <header>
-      <h1 id="titulo-principal">Menor, Maior ou Iguais</h1>
-      <p>Atividade para a prática de JavaScript</p>
-    </header>
 
-    <div class="container-principal">
-        <div class="card-numero">
-            <label for="numero1-analise">Insira o 1º número:</label>
-            <input type="number" id="numero1-analise" name="numero" required>
+    <main>
+      <section aria-labelledby="titulo-principal">
+        <header>
+          <h1 id="titulo-principal">Menor, Maior ou Iguais</h1>
+          <p>Atividade para a prática de JavaScript</p>
+        </header>
+
+        <form class="container-principal">
+          <fieldset>
+              <div class="card-numero">
+                  <label for="numero1-analise">Insira o 1º número:</label>
+                  <input type="number" id="numero1-analise" name="numero" required>
+              </div>
+            
+              <div class="card-numero">
+                  <label for="numero2-analise">Insira o 2º número:</label>
+                  <input type="number" id="numero2-analise" name="numero" required>
+              </div>
+            
+              <div class="card-numero">
+                  <label for="numero3-analise">Insira o 3º número:</label>
+                  <input type="number" id="numero3-analise" name="numero" required>
+              </div>
+              <button type="submit" id="btn-analisar">Enviar</button>
+          </fieldset>
+        </form>
+
+        <div class="container-resultado">
+          <output id="resultado-analise" for="numero1-analise numero2-analise numero3-analise btn-analisar" 
+          aria-live="polite"></output>
         </div>
 
-        <div class="card-numero">
-            <label for="numero2-analise">Insira o 2º número:</label>
-            <input type="number" id="numero2-analise" name="numero" required>
-        </div>
-
-        <div class="card-numero">
-            <label for="numero3-analise">Insira o 3º número:</label>
-            <input type="number" id="numero3-analise" name="numero" required>
-        </div>
-
-        <button type="submit" id="btn-analisar">Enviar</button>
-    </div>
-
-    <div class="container-resultado"><span id="resultado-analise"></span></div>
-
-    <div class="container-btn-voltar"><a href="index.html"><button>Voltar</button></a></div>
+        <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
+
   </body>
 </html>

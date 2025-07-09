@@ -10,19 +10,23 @@
   <body>
     
     <main>
-      <section aria-labelledby="titulo-verificacao">
+      <section aria-labelledby="titulo-principal">
         <header>
           <h1 id="titulo-principal">Verificação de Par ou Ímpar</h1>
           <p>Atividade para a prática de JavaScript</p>
         </header>
 
         <form class="container-principal">
-            <label for="numero-verificar">Insira um número:</label>
-            <input type="number" id="numero-verificar" name="numero" required>
-            <button type="submit" id="btn-verificar">Verificação</button>
+            <fieldset>
+              <label for="numero-verificar">Insira um número:</label>
+              <input type="number" id="numero-verificar" name="numero" required>
+              <button type="submit" id="btn-verificar">Verificação</button>
+            </fieldset>
         </form>
 
-        <output class="container-resultado"><span id="resultado-verificacao"></span></output>
+        <div class="container-resultado">
+          <output id="resultado-verificacao" aria-live="polite"></output>
+        </div>
 
         <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
       </section>

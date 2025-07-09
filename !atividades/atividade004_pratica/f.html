@@ -8,21 +8,31 @@
   </head>
 
   <body>
-    <header>
-      <h1 id="titulo-principal">Verificação de Ano Bissexto</h1>
-      <p>Atividade para a prática de JavaScript</p>
-    </header>
 
-    <div class="container-principal">
-        <label for="ano">Insira um ano: </label>
-        <input type="number" id="ano" name="numero" required>
-        <button type="submit" id="btn-verificar-bissexto">Verificar</button>
-    </div>
-
-    <div class="container-resultado"><span id="resultado-bissexto"></span></div>
-
-    <div class="container-btn-voltar"><a href="index.html"><button>Voltar</button></a></div>
+    <main>
+      <section aria-labelledby="titulo-principal">
+        <header>
+          <h1 id="titulo-principal">Verificação de Ano Bissexto</h1>
+          <p>Atividade para a prática de JavaScript</p>
+        </header>
+      
+        <form class="container-principal">
+          <fieldset>
+            <label for="ano">Insira um ano: </label>
+            <input type="number" id="ano" name="numero" required>
+            <button type="submit" id="btn-verificar-bissexto">Verificar</button>
+          </fieldset>
+        </form>
+      
+        <div class="container-resultado">
+          <output id="resultado-bissexto" for="ano" aria-live="polite"></output>
+        </div>
+      
+        <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
+
   </body>
 </html>

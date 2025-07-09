@@ -8,21 +8,31 @@
   </head>
 
   <body>
-    <header>
-      <h1 id="titulo-principal">Cálculo de Passagens</h1>
-      <p>Atividade para a prática de JavaScript</p>
-    </header>
 
-    <div class="container-principal">
-        <label for="distancia">'Insira a distancia desejada em km: </label>
-        <input type="number" id="distancia" name="numero" required>
-        <button type="submit" id="btn-calcular-preco">Calcular Preço</button>
-    </div>
-
-    <div class="container-resultado"><span id="resultado-calculo-preco"></span></div>
-
-    <div class="container-btn-voltar"><a href="index.html"><button>Voltar</button></a></div>
+    <main>
+      <section aria-labelledby="titulo-principal">
+        <header>
+          <h1 id="titulo-principal">Cálculo de Passagens</h1>
+          <p>Atividade para a prática de JavaScript</p>
+        </header>
+      
+        <form class="container-principal">
+          <fieldset>
+            <label for="distancia">'Insira a distancia desejada em km: </label>
+            <input type="number" id="distancia" name="numero" required>
+            <button type="submit" id="btn-calcular-preco">Calcular Preço</button>
+          </fieldset>  
+          </form>
+      
+        <div class="container-resultado">
+          <output id="resultado-calculo-preco" for="distancia" aria-live="polite"></output>
+        </div>
+      
+        <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
+
   </body>
 </html>

@@ -8,20 +8,29 @@
   </head>
 
   <body>
-    <header>
-      <h1 id="titulo-principal">Monitoramento de Velocidade</h1>
-      <p>Atividade para a prática de JavaScript</p>
-    </header>
 
-    <div class="container-principal">
-        <label for="velocidade">Insira a velocidade do carro em km/h:</label>
-        <input type="number" id="velocidade" name="numero" required>
-        <button type="submit" id="btn-monitorar">Monitorar</button>
-    </div>
-
-    <div class="container-resultado"><span id="resultado-monitoramento"></span></div>
-
-    <div class="container-btn-voltar"><a href="index.html"><button>Voltar</button></a></div>
+    <main>
+      <section aria-labelledby="titulo-principal">
+        <header>
+          <h1 id="titulo-principal">Monitoramento de Velocidade</h1>
+          <p>Atividade para a prática de JavaScript</p>
+        </header>
+      
+        <form class="container-principal">
+          <fieldset>
+            <label for="velocidade">Insira a velocidade do carro em km/h:</label>
+            <input type="number" id="velocidade" name="numero" required>
+            <button type="submit" id="btn-monitorar">Monitorar</button>
+          </fieldset>
+        </form>
+      
+        <div class="container-resultado">
+          <output id="resultado-monitoramento" for="velocidade" aria-live="polite"></output>
+        </div>
+      
+        <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
   </body>
