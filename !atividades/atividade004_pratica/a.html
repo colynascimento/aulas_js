@@ -8,21 +8,27 @@
   </head>
 
   <body>
-    <header>
-      <h1 id="titulo-principal">Verificação de Par ou Ímpar</h1>
-      <p>Atividade para a prática de JavaScript</p>
-    </header>
+    
+    <main>
+      <section aria-labelledby="titulo-verificacao">
+        <header>
+          <h1 id="titulo-principal">Verificação de Par ou Ímpar</h1>
+          <p>Atividade para a prática de JavaScript</p>
+        </header>
 
-    <div class="container-principal">
-        <label for="numero-verificar">Insira um número:</label>
-        <input type="number" id="numero-verificar" name="numero" required>
-        <button type="submit" id="btn-verificar">Verificação</button>
-    </div>
+        <form class="container-principal">
+            <label for="numero-verificar">Insira um número:</label>
+            <input type="number" id="numero-verificar" name="numero" required>
+            <button type="submit" id="btn-verificar">Verificação</button>
+        </form>
 
-    <div class="container-resultado"><span id="resultado-verificacao"></span></div>
+        <output class="container-resultado"><span id="resultado-verificacao"></span></output>
 
-    <div class="container-btn-voltar"><a href="index.html"><button>Voltar</button></a></div>
-
+        <div class="container-btn-voltar"><a href="index.html">Voltar</a></div>
+      </section>
+    </main>
+  
     <script src="js/script.js"></script>
+
   </body>
 </html>
