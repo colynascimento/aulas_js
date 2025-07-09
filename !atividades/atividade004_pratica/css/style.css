@@ -59,11 +59,9 @@ h2 {
   margin-bottom: 10px;
 }
 
-.container-ver-mais {
-  margin-top: 10px;
-}
-
 a {
+  display: inline-block;
+  margin-top: 10px;
   background-color: #5e2a84;
   text-decoration: none;
   color: #ffffff;
