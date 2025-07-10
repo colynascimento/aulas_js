@@ -1,41 +1,7 @@
-// Questão A
-function verificarParOuImpar(numeroRecebido){
-    let numero = parseInt(numeroRecebido);
-    if (numero % 2 == 0) {
-        return `O número ${numero} é par.`;
-    } else {
-        return `O número ${numero} é ímpar.`;
-    };
-};
+import { verificarParOuImpar } from "./modulos/parOuImpar.js";
+import { analiseMaiorNumero } from "./modulos/maiorMenor.js";
+import { analiseMenorNumero } from "./modulos/maiorMenor.js";
 
-// Questão B
-function analiseMaiorNumero(numero1, numero2, numero3){
-    let maior = '';
-
-    if (numero1 > numero2 && numero1 > numero3){
-        maior = numero1;
-    } else if(numero2 > numero1 && numero2 > numero3){
-        maior = numero2;
-    } else if(numero3 > numero1 && numero3 > numero2){
-        maior = numero3;
-    };
-
-    return `O maior número é: ${maior}`;
-};
-
-function analiseMenorNumero(numero1, numero2, numero3){
-    let menor = '';
-
-    if (numero1 < numero2 && numero1 < numero3){
-        menor = numero1;
-    } else if(numero2 < numero1 && numero2 < numero3){
-        menor = numero2;
-    } else if(numero3 < numero1 && numero3 < numero2){
-        menor = numero3;
-    };
-
-    return `O menor número é: ${menor}`;
-};
 
 // Questão C
 function monitoramentoVelocidade(velocidade){
@@ -169,15 +135,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoCalcularRaizes = document.getElementById('btn-calcular-raizes');
     const resultadoRaizes = document.getElementById('resultado-raizes');
 
-    botaoVerificar.addEventListener('click', () => {
-        const resultado = verificarParOuImpar(numeroRecebido.value);
-        resultadoVerificacao.textContent = resultado;
-    });
+    // botaoVerificar.addEventListener('click', () => {
+        // const resultado = verificarParOuImpar(numeroRecebido.value);
+        // resultadoVerificacao.textContent = resultado;
+    // });
 
     botaoAnalisar.addEventListener('click', () => {
-        const numero1Recebido = parseInt(document.getElementById('numero1-analise').value);
-        const numero2Recebido = parseInt(document.getElementById('numero2-analise').value);
-        const numero3Recebido = parseInt(document.getElementById('numero3-analise').value);
+        const numero1Recebido = document.getElementById('numero1-analise').value;
+        const numero2Recebido = document.getElementById('numero2-analise').value;
+        const numero3Recebido = document.getElementById('numero3-analise').value;
 
         const maiorNumero = analiseMaiorNumero(numero1Recebido, numero2Recebido, numero3Recebido);
         const menorNumero = analiseMenorNumero(numero1Recebido, numero2Recebido, numero3Recebido);
@@ -188,35 +154,35 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
-    botaoMonitorar.addEventListener('click', () => {
-        const velocidade = parseInt(velocidadeDetectada.value)
-        const velocidadeResultado = monitoramentoVelocidade(velocidade);
-        resultadoMonitoramento.textContent = velocidadeResultado;
-    });
-
-    botaoCalcular.addEventListener('click', () => {
-        const resultadoSalario = calcularAumento(salario.value);
-        resultadoCalculo.textContent = resultadoSalario;
-    });
-
-    botaoCalcularPreco.addEventListener('click', () => {
-        const resultadoPrecoPassagem =  calcularPassagem(distanciaRecebida.value);
-        resultadoCalculoPreco.textContent = resultadoPrecoPassagem;
-    });
-
-    botaoVerificarAno.addEventListener('click', () => {
-        const anoRecebido = document.getElementById('ano');
-        const resultadoAnoBissexto = detectarBissexto(anoRecebido.value);
-        resultadoBissexto.textContent = resultadoAnoBissexto;
-    });
-
-    botaoVerificarTriangulo.addEventListener('click', () => {
-        const resultadoDoTriangulo = verificarTriangulo(cateto1.value, cateto2.value, hipotenusa.value);
-        resultadoTriangulo.textContent = resultadoDoTriangulo;
-    });
-
-    botaoCalcularRaizes.addEventListener('click', () => {
-        const resultadoRaiz = calcularRaizQuadratica();
-        resultadoRaizes.textContent = resultadoRaiz;
-    });
+    // botaoMonitorar.addEventListener('click', () => {
+        // const velocidade = parseInt(velocidadeDetectada.value)
+        // const velocidadeResultado = monitoramentoVelocidade(velocidade);
+        // resultadoMonitoramento.textContent = velocidadeResultado;
+    // });
+// 
+    // botaoCalcular.addEventListener('click', () => {
+        // const resultadoSalario = calcularAumento(salario.value);
+        // resultadoCalculo.textContent = resultadoSalario;
+    // });
+// 
+    // botaoCalcularPreco.addEventListener('click', () => {
+        // const resultadoPrecoPassagem =  calcularPassagem(distanciaRecebida.value);
+        // resultadoCalculoPreco.textContent = resultadoPrecoPassagem;
+    // });
+// 
+    // botaoVerificarAno.addEventListener('click', () => {
+        // const anoRecebido = document.getElementById('ano');
+        // const resultadoAnoBissexto = detectarBissexto(anoRecebido.value);
+        // resultadoBissexto.textContent = resultadoAnoBissexto;
+    // });
+// 
+    // botaoVerificarTriangulo.addEventListener('click', () => {
+        // const resultadoDoTriangulo = verificarTriangulo(cateto1.value, cateto2.value, hipotenusa.value);
+        // resultadoTriangulo.textContent = resultadoDoTriangulo;
+    // });
+// 
+    // botaoCalcularRaizes.addEventListener('click', () => {
+        // const resultadoRaiz = calcularRaizQuadratica();
+        // resultadoRaizes.textContent = resultadoRaiz;
+    // });
 });
